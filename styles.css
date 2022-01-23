@@ -1,0 +1,47 @@
+.page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 60%;
+    margin: auto;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 4px 10px;
+}
+
+th {
+    background-color: beige;
+}
+
+.table-container, .input-container {
+    padding: 5%;
+}
+.input-container {
+    background-color: beige;
+}
+
+label {
+    place-self: start;
+}
+
+input {
+    display: block;
+    padding: 20px 0;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+#employee-list {
+    margin-top: 40px;
+}
+
