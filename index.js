@@ -58,12 +58,6 @@ function handleFiles() {
 function findPairs(data) {
   const newArray = new Array();
   data.forEach((element, index) => {
-    let next;
-    if (element == data[data.length - 1]) {
-      next = data[0];
-    } else {
-      next = data[index + 1];
-    }
     for (let i = 0; i < data.length; i++) {
       let temp = data[i];
       console.log(temp);
