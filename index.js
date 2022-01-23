@@ -64,17 +64,29 @@ function findPairs(data) {
     } else {
       next = data[index + 1];
     }
-    if (element.ProjectID === next.ProjectID) {
-      const daysWorked = overlap(
-        element.DateFrom,
-        element.DateTo,
-        next.DateFrom,
-        next.DateTo
-      );
-      newArray.push([element.EmpID, next.EmpID, element.ProjectID, daysWorked]);
+    for (let i = 0; i < data.length; i++) {
+      let temp = data[i];
+      console.log(temp);
+      if (
+        element.ProjectID === temp.ProjectID &&
+        element.EmpID !== temp.EmpID
+      ) {
+        const daysWorked = overlap(
+          element.DateFrom,
+          element.DateTo,
+          temp.DateFrom,
+          temp.DateTo
+        );
+        newArray.push([
+          element.EmpID,
+          temp.EmpID,
+          element.ProjectID,
+          daysWorked,
+        ]);
+        console.log(newArray);
+      }
     }
   });
-
   return newArray;
 }
 
